@@ -1,0 +1,59 @@
+.theList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.theList:before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 20px 0px 20px;
+  background: #9b9b9b;
+}
+
+.theList li:before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.theList li:after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 20px 0px 20px;
+  background: #9b9b9b;
+}
+
+.taskItemLocked {
+  text-decoration-line: none;
+  color: #9b9b9b;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+.taskItemLocked:before {
+  content: url(./images/Locked.svg);
+  padding-right: 25px;
+  margin: 2.5px 4.5px;
+}
+
+.taskItemCompleted {
+  text-decoration-line: line-through;
+  font-weight: 600;
+}
+
+.taskItemCompleted:before {
+  content: url(./images/Completed.svg);
+  padding-right: 25px;
+}
+
+.taskItem {
+  text-decoration-line: none;
+  font-weight: 600;
+}
+
+.taskItem:before {
+  content: url(./images/Incomplete.svg);
+  padding-right: 25px;
+}

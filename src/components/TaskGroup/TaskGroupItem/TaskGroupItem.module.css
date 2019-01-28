@@ -1,0 +1,51 @@
+.theList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.theList:before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 20px 0px 20px;
+  background: #9b9b9b;
+}
+
+.theList li:before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.theList li:after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 20px 0px 20px;
+  background: #9b9b9b;
+}
+
+.taskGroupItem:before {
+  display: inline-block;
+  content: url(./images/Group.svg);
+  padding-right: 25px;
+}
+
+.taskGroupItem div {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.taskGroupItem .taskGroupItemHeader h3 {
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.taskGroupItem .taskGroupItemHeader span {
+  margin: 0px;
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 500;
+}

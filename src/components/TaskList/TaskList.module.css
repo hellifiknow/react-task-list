@@ -1,0 +1,48 @@
+.taskListMain button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: #069;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  float: right;
+  margin-top: 7px;
+}
+
+.taskListMain {
+  width: 400px;
+}
+
+.taskListMain .header span {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.taskListMain h1:after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 20px 0px 20px;
+  background: #9b9b9b;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .taskListMain {
+    width: 85vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .taskListMain {
+    width: 85vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .taskListMain {
+    width: 85vw;
+  }
+}

@@ -64,16 +64,16 @@ class App extends Component {
   };
 
   updateGroupItem = groupItem => {
-    let importedGroup = this.state.groups.find(item => {
+    let updatedGroup = this.state.groups.find(item => {
       return item.key === groupItem.group;
     });
 
-    let importedGroups = update(this.state.groups, {
-      [groupItem.group]: { $set: importedGroup }
+    let updatedGroups = update(this.state.groups, {
+      [groupItem.group]: { $set: updatedGroup }
     });
 
-    for (var i = 0; i < importedGroups.length; i++) {
-      importedGroups[i].items = importedGroups[i].items.map(item => {
+    for (var i = 0; i < updatedGroups.length; i++) {
+      updatedGroups[i].items = updatedGroups[i].items.map(item => {
         if (
           item.dependencyIds.findIndex(
             dependency => dependency.id === groupItem.id
@@ -88,12 +88,12 @@ class App extends Component {
       });
     }
 
-    let listShown = importedGroups.filter(group => {
+    let listShown = updatedGroups.filter(group => {
       return group.showItems === true;
     });
 
     this.setState({
-      groups: importedGroups,
+      groups: updatedGroups,
       itemsShown: listShown.length > 0
     });
   };
